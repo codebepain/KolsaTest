@@ -76,7 +76,7 @@ final class ProductListViewModel: ProductListViewModelProtocol {
         state.content = .loading
         
         do {
-            self.products = try await repository.fetchProducts()
+            products = try await repository.fetchProducts()
             updateState()
         } catch {
             state.content = .failure(error: "Не удалось загрузить данные")
@@ -93,7 +93,7 @@ final class ProductListViewModel: ProductListViewModelProtocol {
     // MARK: - Private Methods
     
     private func updateState() {
-        let sortedProducts: [Product] = products.sorted {
+        let sortedProducts = products.sorted {
             switch state.sortOrder {
             case .byName:
                 return $0.name < $1.name
