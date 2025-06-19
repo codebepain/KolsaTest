@@ -17,17 +17,13 @@
 ## Структура проекта
 
 - `App/` — точка входа приложения (AppDelegate, SceneDelegate)
-- `Modules/ProductList/` — основной модуль со списком товаров (View, ViewModel, Model, Services)
-- `Modules/ProductDetail/` — модуль с деталями товара
-- `Common/UI/` — общие UI-компоненты
+- `Modules/` — модули проекта (`ProductList, ProductDetail`)
+- `Common/` — общие компоненты
 - `DI/` — контейнер и сборка зависимостей
-- `Extensions/` — расширения UIKit
-- `Resources/` — ассеты, Info.plist, LaunchScreen, products.json
+- `Extensions/` — расширения
+- `Resources/` — Assets, Info.plist, LaunchScreen, products.json
 
 ## Запуск проекта
 
 1. Откройте `KolsaTest.xcodeproj` в Xcode (минимальная версия Xcode — 15, iOS Deployment Target — 18.0).
 2. Соберите и запустите проект на симуляторе или устройстве.
-
-## Автор
-Владимир Орлов 
